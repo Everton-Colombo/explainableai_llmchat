@@ -1,5 +1,5 @@
 # Installation:
-1. Do `pip install -r requirements.txt`
+1. Run `intall.sh`
 
 # To run the app:
 1. Run explanations_api.py
@@ -7,4 +7,4 @@
 3. access the gradio webserver through browser (url should be localholst:7860, but not necessarily. see logs)
 
 OR:
-1. Run ./run.sh
+1. Run `run.sh`
