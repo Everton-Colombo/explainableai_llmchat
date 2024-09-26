@@ -1,0 +1,9 @@
+groq
+langchain_core
+langchain_groq
+gradio
+fastapi
+uvicorn
+shap
+scikit-learn
+prettytables

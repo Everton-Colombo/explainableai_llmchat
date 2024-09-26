@@ -27,11 +27,8 @@ from sklearn.linear_model import LogisticRegression
 
 app = FastAPI()
 
-# Why use a http API? don't really know; the original material had it setup this way (with two separate APIs, actually - I combined them), so I'm just following along.
-# I don't see why this couldn't all be done in the same file as the app code. But hey, I got to learn a bit about FastAPI, so that's cool.
-
 ## Setting up context:
-data = pd.read_csv("german_encoded.csv") # Load the data
+data = pd.read_csv("data/german_encoded.csv") # Load the data
 X = data.drop(columns=["GoodCustomer", "OtherLoansAtStore"]) # OtherLoansAtStore was droped, since it only contained one value, and mapocam didnt like that
 y = data["GoodCustomer"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=42)
@@ -147,7 +144,7 @@ def get_shap_results(client_index: int):
     :return: A json of the form {"client_index": [CLIENT_INDEX], "shap_results": [{"feature": [FEATURE], "shap_value": [SHAP_VALUE]}, ...]}, orderdered by descending feature importance.
     """
 
-    explainer = shap.Explainer(clf)
+    explainer = shap.LinearExplainer(clf, X_train)
     shap_values = explainer(X)
 
     sorted_feature_indices = np.argsort(abs(shap_values.values[client_index]))[::-1]
