@@ -4,7 +4,7 @@ __credits__ = ["Everton Romanzini Colombo", "Larissa Ayumi Okabayashi"]
 
 import requests
 from groq import *
-import json
+# import json
 import gradio as gr
 from langchain_groq import ChatGroq
 from langchain_core.tools import tool

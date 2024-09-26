@@ -7,12 +7,12 @@ __credits__ = ["Everton Romanzini Colombo", "Larissa Ayumi Okabayashi"]
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 import uvicorn
-import json
+# import json
 
 import pandas as pd
 import numpy as np
 
-import xgboost as xgb
+# import xgboost as xgb
 
 from sklearn.inspection import partial_dependence
 from sklearn.model_selection import train_test_split
