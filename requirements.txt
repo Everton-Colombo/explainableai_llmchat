@@ -6,4 +6,16 @@ fastapi
 uvicorn
 shap
 scikit-learn
+
+# FROM MAPOCAM:
+pandas
+numpy
+jupyterlab
+sortedcontainers
+line_profiler
+eli5
+lightgbm
+mip
+graphviz
+xxhash
 prettytables
