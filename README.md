@@ -1,5 +1,6 @@
 # Installation:
-1. Run `intall.sh`
+1. Update app.py to contain your GROQ API key
+2. Run `intall.sh`
 
 # To run the app:
 1. Run explanations_api.py
