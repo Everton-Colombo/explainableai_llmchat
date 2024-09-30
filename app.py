@@ -17,8 +17,7 @@ import os
 # The free chat now also keeps track of previous prompts and tool calls.
 
 EXPLANATION_API_URL = "http://localhost:5000"   # make sure explanations_api.py is already running
-# client = Groq(api_key="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")
-os.environ["GROQ_API_KEY"] = "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"
+os.environ["GROQ_API_KEY"] = "[YOUR_API_KEY]"
 MODEL = 'llama-3.1-70b-versatile'
 llm = ChatGroq(model=MODEL) # MAKE SURE GROQ API IS IN VENV, RUN: export GROQ_API_KEY='[YOUR_API_KEY]'
 
